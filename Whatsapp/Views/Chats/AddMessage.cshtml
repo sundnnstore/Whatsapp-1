@@ -1,0 +1,15 @@
+﻿@model Whatsupp.Models.ChatMessage
+@{
+    ViewBag.Title = "AddMessage";
+}
+
+<h2>AddMessage</h2>
+
+@using (Html.BeginForm())
+{
+    <br /><br />
+    @Html.LabelFor(m => m.Message)
+    @Html.TextBoxFor(m => m.Message)
+    @Html.ValidationMessageFor(m => m.Message)
+    <input type="submit" value="Send Message" />
+}

@@ -1,0 +1,18 @@
+﻿@using Whatsupp.Models
+@model Whatsupp.Models.Contact
+@{
+    ViewBag.Title = "Delete Contact";
+}
+
+<h2>Delete Contact</h2>
+@using (Html.BeginForm())
+{
+    <br /><br />
+    @Html.LabelFor(m => m.Name)
+    <p>@Model.Name</p>
+    <br /><br />
+    @Html.LabelFor(m => m.Email)
+    <p>@Model.Email</p>
+    <br /><br />
+    <input type="submit" value="Delete Contact" />
+}

@@ -1,0 +1,13 @@
+﻿@model IEnumerable<Whatsupp.Models.ChatMessage>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Chats</h2>
+
+@foreach (var chatmessage in Model)
+{
+    <h3>@chatmessage.Message</h3>
+    <p>@chatmessage.Time</p>
+}
