@@ -50,10 +50,9 @@ namespace Whatsupp.Controllers
         public ActionResult LogOff()
         {
             if (Session["loggedin_account"] == null)
-                ViewData["bool"] = false;
+                return View("Login");
             else
-                ViewData["bool"] = true;
-            return View();
+                return View("Logoff");
         }
 
         [HttpPost]

@@ -5,13 +5,8 @@
 
 <h2>Logoff</h2>
 
-@if ((bool)ViewData["bool"] == true)
-{
-    <p>You have logged in</p>
-    <input type="submit" value="LogOff" />
-}
-else
-{
-    <p>You have not logged in</p>
-    <input type="submit" value="LogIn" />
-}
+    @using (Html.BeginForm())
+    {
+        <p>You have logged in</p>
+        <input type="button" value="go" />
+    }
